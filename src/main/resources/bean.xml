@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="helloWorld" class="com.wewe.spring.bean.HelloWorld">
+        <property name="message" value="Hello World!"/>
+    </bean>
+    <context:component-scan base-package="com.wewe.spring.bean"></context:component-scan>
+
+    <!-- 定义一个bean -->
+    <bean id="narCodeService" class="com.wewe.spring.bean.postprocessorbean.NarCodeService">
+    </bean>
+    <!--<bean id="beanLifecycle" class="com.test.spring.BeanLifecycle" init-method="init" destroy-method="close">-->
+        <!--<property name="name" value="张三"></property>-->
+        <!--<property name="sex" value="男"></property>-->
+    <!--</bean>-->
+
+    <!-- Spring后置处理器 -->
+    <bean id="postProcessor" class="com.wewe.spring.bean.postprocessorbean.PostProcessor"/>
+</beans>
