@@ -1,5 +1,5 @@
-##学习笔记
-####设计模式
+## 学习笔记
+#### 设计模式
 - 简单工厂模式
 - 工厂方法模式
 - 抽象工厂模式
@@ -13,7 +13,7 @@
 - 单例模式
 - 享元模式
 - 策略模式
-####Java并发编程的艺术
+#### Java并发编程的艺术
 - Java内存模型
 - 线程间的通信
 - Synchronized Volatile ReentrantLock Condition CAS
@@ -23,16 +23,16 @@
 - Java线程池
 - Executor框架  
 
-####Java集合类  
+#### Java集合类  
 - LinkedHashSet TreeSet
 - ArrayList LinkedList 
 - HashMap TreeMap HashTable
 - PriorityQueue  
 
-####kafka
+#### kafka
 
-####zookeeper  
+#### zookeeper  
 
-####一致性hash  
+#### 一致性hash  
 
-####Java8新特性  
+#### Java8新特性  
