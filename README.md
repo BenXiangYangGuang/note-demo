@@ -21,13 +21,18 @@
 > ConcurrentHashMap  ConcurrentLinkedQueue  ArrayBlockingQueue LinkedBlockingQueue PriorityBlockingQueue  SynchronousQueue
 - Java并发框架
 - Java线程池
-- Executor框架
-####Java集合类
+- Executor框架  
+
+####Java集合类  
 - LinkedHashSet TreeSet
 - ArrayList LinkedList 
 - HashMap TreeMap HashTable
-- PriorityQueue
+- PriorityQueue  
+
 ####kafka
-####zookeeper
-####一致性hash
-####Java8新特性
+
+####zookeeper  
+
+####一致性hash  
+
+####Java8新特性  
