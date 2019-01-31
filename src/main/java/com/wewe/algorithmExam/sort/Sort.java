@@ -1,8 +1,6 @@
 package com.wewe.algorithmExam.sort;
 
 
-import java.util.ArrayList;
-
 /**
  * Author: fei2
  * Date:  19-1-21 下午1:58
@@ -14,12 +12,12 @@ public class Sort {
 
 
     public static void main(String[] args) {
-//        directInsert();
+        directInsert();
 //        binaryInsert();
 //        shellSort();
 //        BubbleSort();
 //        mainDemo();
-        selectSort();
+//        selectSort();
     }
 
     /**

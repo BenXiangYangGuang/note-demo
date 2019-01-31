@@ -21,6 +21,7 @@ public class SubjectPreDecorator implements ISubject {
   }
 
   private void preAction() {
+    System.out.println("SubjectPreDecorator.preAction()");
     LOG.info("SubjectPreDecorator.preAction()");
   }
 
