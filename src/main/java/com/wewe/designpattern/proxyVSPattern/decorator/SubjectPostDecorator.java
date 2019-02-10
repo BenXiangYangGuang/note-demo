@@ -20,7 +20,8 @@ public class SubjectPostDecorator implements ISubject {
   }
 
   private void postAction() {
-    LOG.info("SubjectPostDecorator.preAction()");
+    System.out.println("SubjectPostDecorator.postAction()");
+    LOG.info("SubjectPostDecorator.postAction()");
   }
 
 }

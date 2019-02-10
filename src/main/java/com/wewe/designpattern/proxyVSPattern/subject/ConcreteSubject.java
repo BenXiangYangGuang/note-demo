@@ -10,6 +10,7 @@ public class ConcreteSubject implements ISubject {
 
   @Override
   public void action() {
+    System.out.println("ConcreteSubject action()");
     LOG.info("ConcreteSubject action()");
   }
 
