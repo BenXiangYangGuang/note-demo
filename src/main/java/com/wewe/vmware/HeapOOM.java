@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class HeapOOM {
     /**
-     * -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError 可以将虚拟机内存溢出信息dump当前的内存堆转储快照以便事后处理 最小值-Xms 最大值 _Xmx
+         * -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError 可以将虚拟机内存溢出信息dump当前的内存堆转储快照以便事后处理 最小值-Xms 最大值 _Xmx
      *  堆内存溢出
      */
     static class OOMObject{}
