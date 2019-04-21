@@ -273,7 +273,17 @@ public class TestMain {
         }
     }
 
-
+    @Test
+    public void printList(){
+        List<Integer> list = new ArrayList<>();
+        list.add(3);
+        list.add(1);
+        list.add(8);
+        list.add(5);
+        for (int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i));
+        }
+    }
 
 
 
