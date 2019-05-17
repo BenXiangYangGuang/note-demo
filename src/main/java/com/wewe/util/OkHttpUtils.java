@@ -16,23 +16,23 @@ import java.util.Map;
 public class OkHttpUtils {
     
     //单例模式
-    private static OkHttpUtils OK_HTTP_UTILS=null;
-    
+    private static OkHttpClient okHttpClient = null;
+
     /**
      * 得到OkHttpUtils实例对象
      *
      * @return
      */
     private OkHttpUtils(){}
-    public static OkHttpUtils getInstance(){
-        if(null==OK_HTTP_UTILS){
-            synchronized (OkHttpUtils.class){
-                if(null==OK_HTTP_UTILS){
-                    OK_HTTP_UTILS=new OkHttpUtils();
+    public static OkHttpClient getInstance(){
+        if(null==okHttpClient){
+            synchronized (OkHttpClient.class){
+                if(null==okHttpClient){
+                    okHttpClient = new OkHttpClient();
                 }
             }
         }
-        return OK_HTTP_UTILS;
+        return okHttpClient;
     }
     
     /**
@@ -67,24 +67,12 @@ public class OkHttpUtils {
             sb.deleteCharAt(sb.length()-1);
         }
         
-        OkHttpClient okHttpClient=new OkHttpClient();
         //构建请求项
         Request request=new Request.Builder()
             .get()
             .url(sb.toString())
             .build();
-        String resultStr = "";
-        try {
-            Response response = okHttpClient.newCall(request).execute();
-            if (!response.isSuccessful()){
-                log.error("服务器端错误：{}" , response);
-            }else {
-                resultStr = response.body().string();
-            }
-        } catch (IOException e) {
-            log.error("出现IOException");
-        }
-        return resultStr;
+        return doExeucuteQequestAndParseRespone(request);
     }
     
     /**
@@ -96,7 +84,7 @@ public class OkHttpUtils {
      */
     
     public String doPost(String path,Map<String,String> map) throws IOException {
-        OkHttpClient okHttpClient=new OkHttpClient();
+
         //构建参数的对象
         FormEncodingBuilder formEncodingBuilder = new FormEncodingBuilder();
         //遍历map集合，获取用户的key/value
@@ -108,19 +96,27 @@ public class OkHttpUtils {
             .post(formEncodingBuilder.build())
             .url(path)
             .build();
-        String resultStr = "";
+
+        return doExeucuteQequestAndParseRespone(request);
+        
+    }
+    public String doExeucuteQequestAndParseRespone(Request request){
+
+        OkHttpClient okHttpClient=OkHttpUtils.getInstance();
+
         try {
             Response response = okHttpClient.newCall(request).execute();
             if (!response.isSuccessful()){
                 log.error("服务器端错误：{}" , response);
             }else {
-                resultStr = response.body().string();
+                return response.body().string();
             }
         } catch (IOException e) {
             log.error("出现IOException");
         }
-        return resultStr;
-        
+        return null;
+
     }
+
     
 }
