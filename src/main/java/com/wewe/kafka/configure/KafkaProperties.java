@@ -2,8 +2,8 @@ package com.wewe.kafka.configure;
 
 
 public class KafkaProperties {
-    //public static final String HOSTNAME = "192.168.1.55";
-    public static final String HOSTNAME = "localhost";
+    public static final String HOSTNAME = "172.24.4.43";
+//    public static final String HOSTNAME = "localhost";
 
     public static final int ZK_PORT = 22222;
 

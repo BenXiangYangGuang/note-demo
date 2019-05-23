@@ -16,7 +16,7 @@ public class OkHttpUtilsTest extends TestCase {
     public void testDoGet() throws Exception {
         Map<String ,String> paramMap = new HashMap<>();
         paramMap.put("is_template","0");
-        String resultStr =  OkHttpUtils.getInstance().doGet("http://localhost:2018/api/v1/base/rule",paramMap);
+        String resultStr =  OkHttpUtils.doGet("http://localhost:2018/api/v1/base/rule",paramMap);
         System.out.println(resultStr);
         
     }
@@ -26,7 +26,7 @@ public class OkHttpUtilsTest extends TestCase {
         Map<String ,String> paramMap = new HashMap<>();
         paramMap.put("name","name0");
         paramMap.put("id","id0");
-        String resultStr =  OkHttpUtils.getInstance().doPost("http://localhost:8080/users/postUser",paramMap);
+        String resultStr =  OkHttpUtils.doPost("http://localhost:8080/users/postUser",paramMap);
         System.out.println(resultStr);
     }
     

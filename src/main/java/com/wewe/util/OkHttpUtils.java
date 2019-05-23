@@ -42,7 +42,7 @@ public class OkHttpUtils {
      * @return 返回结果
      */
     
-    public String doGet(String path, Map<String,String> map){
+    public static String doGet(String path, Map<String, String> map){
         StringBuffer sb = new StringBuffer();
         sb.append(path);
         //判断path是否包含一个
@@ -83,7 +83,7 @@ public class OkHttpUtils {
      * @throws IOException
      */
     
-    public String doPost(String path,Map<String,String> map) throws IOException {
+    public static String doPost(String path, Map<String, String> map) throws IOException {
 
         //构建参数的对象
         FormEncodingBuilder formEncodingBuilder = new FormEncodingBuilder();
@@ -100,7 +100,7 @@ public class OkHttpUtils {
         return doExeucuteQequestAndParseRespone(request);
         
     }
-    public String doExeucuteQequestAndParseRespone(Request request){
+    public static String doExeucuteQequestAndParseRespone(Request request){
 
         OkHttpClient okHttpClient=OkHttpUtils.getInstance();
 
