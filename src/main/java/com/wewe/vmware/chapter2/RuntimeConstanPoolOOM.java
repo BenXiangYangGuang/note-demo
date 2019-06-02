@@ -1,4 +1,4 @@
-package com.wewe.vmware;
+package com.wewe.vmware.chapter2;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;

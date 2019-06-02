@@ -1,5 +1,6 @@
 package com.wewe.setExample;
 
+
 import java.util.*;
 
 public class ListTest {
@@ -10,6 +11,20 @@ public class ListTest {
         books.add(new String("疯狂Java讲义"));
         books.add(new String("疯狂Android讲义"));
         System.out.println(books);
+
+        System.out.println("-------------------iterator--------------------");
+        Iterator<String> iterator = books.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+        System.out.println("-------------------iterator-remove-----------");
+//        while (iterator.hasNext()){
+//            System.out.println(iterator.next());
+//            iterator.remove();
+//        }
+        System.out.println("-------------------iterator--------------------");
+        books.listIterator();
+
 
         //将新字符串对象插入在第二个位置
         books.add(1, new String("疯狂Ajax讲义"));

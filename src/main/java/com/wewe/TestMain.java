@@ -2,6 +2,7 @@ package com.wewe;
 
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.*;
@@ -14,6 +15,17 @@ import java.util.concurrent.ConcurrentHashMap;
  * Refer To:
  */
 public class TestMain {
+    public static void main(String[] args) {
+        Integer a =10;
+        Integer b = new Integer(10);
+        System.out.println(a.equals(b));
+        System.out.println(a == b);
+        int [] ab = {1,2};
+        int[][] array = {{1,2,3},{4,5,6}};
+        System.out.println(array.length);
+
+        System.out.println(a.hashCode());
+    }
     @Test
     public void hashMapTest(){
         HashMap<String,String> map = new HashMap<>();

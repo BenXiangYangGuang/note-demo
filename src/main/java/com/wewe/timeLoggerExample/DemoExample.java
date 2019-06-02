@@ -26,13 +26,13 @@ public class DemoExample {
         executor.scheduleAtFixedRate(new KafkaDealDataStatistics(kafkaDealDataIndicator) , 0,2 , TimeUnit.SECONDS);
         GroupKafka groupKafka = new GroupKafka(kafkaDealDataIndicator);
         groupKafka.increase();
-        try {
+   /*     try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         executor.shutdown();
-
+*/
 
     }
 }

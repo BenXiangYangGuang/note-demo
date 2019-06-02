@@ -1,4 +1,4 @@
-package com.wewe.vmware;
+package com.wewe.vmware.chapter2;
 
 /**
  * Author: wewe
@@ -8,7 +8,7 @@ package com.wewe.vmware;
  */
 public class JavaVMStackSOF {
    /**
-    -Xss128k;
+    -Xss128k;设置栈大小
     HotSpot虚拟机不区分虚拟机栈和本地方法栈; -Xoss参数无效设置本地方法栈无效;
     StackOverflowError 线程请求的栈深度大于虚拟机所允许的最大深度;
     OutOfMemoryError虚拟机在扩展栈时,无法申请足够的内存空间;
