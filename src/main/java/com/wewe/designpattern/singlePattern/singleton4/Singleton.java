@@ -2,6 +2,10 @@ package com.wewe.designpattern.singlePattern.singleton4;
 
 /**
  * 懒加载推荐;线程安全
+ *
+ * http://ifeve.com/double-checked-locking-with-delay-initialization/
+ *
+ * volatile 关键字防止 INSTANCE = new Singleton(); 重新排序
  */
 public class Singleton {
 

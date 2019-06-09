@@ -1,11 +1,11 @@
-package com.wewe.arrow;
+package com.wewe.arrowOffer;
 
 import org.junit.Test;
 
 /**
  * Author: fei2
  * Date:  19-5-26 下午10:23
- * Description:
+ * Description: 数组有序查找
  * Refer To:
  */
 public class First {
