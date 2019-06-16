@@ -1,6 +1,5 @@
 package com.wewe.algorithmExam;
 
-import com.wewe.designpattern.observerParttern.subject.HeadHunter;
 
 /**
  * Author: fei2
@@ -30,10 +29,17 @@ public class LinkedListRevert {
         NodeExample tail = revert(head);
 
         while (tail != null){
-            System.out.println(head.value);
-            head = head.next;
+            System.out.println(tail.value);
+            tail = tail.next;
         }
     }
+
+    /**
+     * 链表逆序
+     *
+     * @param head
+     * @return
+     */
 
     private static NodeExample revert(NodeExample head){
         if (head == null){
@@ -46,9 +52,11 @@ public class LinkedListRevert {
 
         while (cur!=null){
             post = cur.next;
-
+            cur.next = pre;
+            pre = cur;
+            cur = post;
         }
-        return second;
+        return pre;
 
     }
 
